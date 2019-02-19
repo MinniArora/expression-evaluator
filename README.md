@@ -4,7 +4,7 @@ This is a general purpose expression evaluator for spring boot applications. It 
 
 Features:
 1. Supports standard mathematical operators, relational operators (==, !=, <, >, <=, >=), conditional operators (and, or, not) and regular expressions.
-2. Fast. Responds in single digit milliseconds.
+2. Fast. Responds in two digit milliseconds.
 3. Supports defining rules in terms of multiple data objects. 
 4. Supports defining rules around request and system properties.
 
@@ -33,6 +33,8 @@ Integration Steps:
 		data['profile']['location'] == '65' and data['system']['day'] == 'tuesday'
 	
 		(data['profile']['location'] == '65' or data['profile']['role'] == '6')
+
+where, data is a mandatory prefix and location is an attribute of profile object that should be provided as input data.
 
 3. Validate Expression: It is quite possible that you need to define the expression at one place/application and evaluate it at the other. In such cases, you can validate the expression beforehand to check for syntax errors or non supported format errors. Sample code to validate the expression:
 	
